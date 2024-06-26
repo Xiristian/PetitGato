@@ -26,3 +26,13 @@ output "adls_container_gold" {
   description = "Name of the created storage container gold"
   value       = azurerm_storage_container.gold.name
 }
+
+output "sql_server_name" {
+  description = "Name of the created SQL Server"
+  value       = azurerm_mssql_server.petit-gato.name
+}
+
+output "sql_server_fqdn" {
+  description = "Fully Qualified Domain Name of the created SQL Server"
+  value       = azurerm_mssql_server.petit-gato.fully_qualified_domain_name
+}
