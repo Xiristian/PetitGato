@@ -1,9 +1,13 @@
 
 # Lista de variaveis utilizadas nos arquivos de terraform
 variable "resource_group_name" {
-  default = "learn-6645ede3-dbe7-406c-b6b7-68539495cbf4"
+  default = "learn-09fe8593-2cf4-4bb9-a211-bf820db47670"
 }
 
 variable "location" {
   default = "westus"
+}
+
+variable "password" {
+  default = "c4puRRc!n0"
 }

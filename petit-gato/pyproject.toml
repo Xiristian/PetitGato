@@ -1,13 +1,20 @@
 [tool.poetry]
-name = "projeto-ed-satc"
+name = "petit-gato"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
-mkdocs = "^1.6.0"
+pyodbc = "^5.1.0"
+faker = "^25.9.2"
+azure-identity = "^1.16.0"
+azure-storage-file-datalake = "^12.15.0"
+python-dotenv = "^1.0.1"
+azure-core = "^1.30.1"
+sqlalchemy = "^2.0.30"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -15,13 +22,6 @@ isort = "^5.13.2"
 blue = "^0.9.1"
 pytest = "^8.2.2"
 taskipy = "^1.12.2"
-
-
-[tool.poetry.group.docs.dependencies]
-mkdocs = "^1.6.0"
-mkdocs-material = "^9.5.23"
-pymdown-extensions = "^10.8.1"
-mkdocstrings = "^0.25.1"
 
 
 [tool.poetry.group.test.dependencies]

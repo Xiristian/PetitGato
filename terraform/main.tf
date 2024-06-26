@@ -50,6 +50,18 @@ resource "azurerm_storage_container" "gold" {
   container_access_type = "private"
 }
 
+resource "azurerm_mssql_server" "petit-gato" {
+  name                         = "petit-gato"
+  resource_group_name          = var.resource_group_name
+  location                     = var.location
+  version                      = "12.0"
+  administrator_login          = "petit-gato"
+  administrator_login_password = var.password
+  minimum_tls_version          = "1.2"
 
+  tags = {
+    environment = "production"
+  }
+}
 
 

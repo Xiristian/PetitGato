@@ -3,14 +3,27 @@ from faker import Faker
 import random
 from datetime import datetime
 
-# Configurações de conexão
-server = 'localhost'
-database = 'pettit-gato'
-username = 'sa'
-password = 'satc@2023'
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+account_name = os.getenv("ADLS_ACCOUNT_NAME")
+file_system_name = os.getenv("ADLS_FILE_SYSTEM_NAME")
+directory_name = os.getenv("ADLS_DIRECTORY_NAME")
+sas_token = os.getenv("ADLS_SAS_TOKEN")
+
+# Configurações do SQL Server
+server = os.getenv("SQL_SERVER")
+database = os.getenv("SQL_DATABASE")
+schema = os.getenv("SQL_SCHEMA")
+username = os.getenv("SQL_USERNAME")
+password = quote_plus(os.getenv("SQL_PASSWORD"))
 driver = '{ODBC Driver 17 for SQL Server}'
 
 connection_string = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+connection_string = f"mssql+pyodbc://{username}:{password}@{server}/{database}?driver=ODBC+Driver+17+for+SQL+Server"
 
 # Lista de nomes e categorias temáticos
 items = [
