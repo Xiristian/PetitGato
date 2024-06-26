@@ -24,7 +24,6 @@ password = quote_plus(os.getenv("SQL_PASSWORD"))
 driver = '{ODBC Driver 17 for SQL Server}'
 
 connection_string = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}'
-connection_string = f"mssql+pyodbc://{username}:{password}@{server}/{database}?driver=ODBC+Driver+17+for+SQL+Server"
 
 # Lista de nomes e categorias temáticos
 items = [
