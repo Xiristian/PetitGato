@@ -65,8 +65,5 @@ terraform apply
 Faça login em [portal.azure.com](https://portal.azure.com/) e verifique o ADLS e o SQL Server criado.
 ```
 
-##### 5. Destruir recursos criados
-**Cuidado:** Apenas use isso se você não quiser seguir para os próximos passos
-```
-terraform destroy
-```
+###### 4.1 Aplicar o Terraform na nuvem
+Liberar IP no firewall do SQL Server nas configurações de rede
