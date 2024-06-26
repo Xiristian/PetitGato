@@ -2,6 +2,7 @@ import pyodbc
 from faker import Faker
 import random
 from datetime import datetime
+from urllib.parse import quote_plus
 
 import os
 from dotenv import load_dotenv
