@@ -20,10 +20,30 @@ server = os.getenv("SQL_SERVER")
 database = os.getenv("SQL_DATABASE")
 schema = os.getenv("SQL_SCHEMA")
 username = os.getenv("SQL_USERNAME")
-password = quote_plus(os.getenv("SQL_PASSWORD"))
+password = 'c4puRRc!n0'
 driver = '{ODBC Driver 17 for SQL Server}'
 
-connection_string = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+connection_string = f'DRIVER={driver};SERVER={server};DATABASE=master;UID={username};PWD={password}'
+try:
+    conn = pyodbc.connect(connection_string)
+    cursor = conn.cursor()
+    conn.autocommit = True
+    cursor.execute("""
+    CREATE DATABASE petitgato;
+    """)
+    conn.commit()
+except pyodbc.Error as ex:
+    print(f"Erro ao conectar ao SQL Server: {ex}")
+finally:
+    try:
+        if cursor:
+            cursor.close()
+        if conn:
+            conn.close()
+    except pyodbc.Error as ex:
+        print(f"Erro ao fechar a conexão: {ex}")
+
+connection_string = f'DRIVER={driver};SERVER={server};DATABASE=petitgato;UID={username};PWD={password}'
 
 # Lista de nomes e categorias temáticos
 items = [
@@ -106,23 +126,26 @@ try:
     cursor = conn.cursor()
 
     # Criar tabelas
-    cursor.execute("""
-    IF OBJECT_ID('cat_customer', 'U') IS NOT NULL DROP TABLE cat_customer;
-    IF OBJECT_ID('payment', 'U') IS NOT NULL DROP TABLE payment;
-    IF OBJECT_ID('orderitem', 'U') IS NOT NULL DROP TABLE orderitem;
-    IF OBJECT_ID('customerorder', 'U') IS NOT NULL DROP TABLE customerorder;
-    IF OBJECT_ID('cat', 'U') IS NOT NULL DROP TABLE cat;
-    IF OBJECT_ID('item', 'U') IS NOT NULL DROP TABLE item;
-    IF OBJECT_ID('coffeetable', 'U') IS NOT NULL DROP TABLE coffeetable;
-    IF OBJECT_ID('customer', 'U') IS NOT NULL DROP TABLE customer;
-    IF OBJECT_ID('category', 'U') IS NOT NULL DROP TABLE category;
 
-    CREATE TABLE category (
+    cursor.execute("""
+    IF OBJECT_ID('cat_customer', 'U') IS NOT NULL DROP TABLE dbo.cat_customer;
+    IF OBJECT_ID('payment', 'U') IS NOT NULL DROP TABLE dbo.payment;
+    IF OBJECT_ID('orderitem', 'U') IS NOT NULL DROP TABLE dbo.orderitem;
+    IF OBJECT_ID('customerorder', 'U') IS NOT NULL DROP TABLE dbo.customerorder;
+    IF OBJECT_ID('cat', 'U') IS NOT NULL DROP TABLE dbo.cat;
+    IF OBJECT_ID('item', 'U') IS NOT NULL DROP TABLE dbo.item;
+    IF OBJECT_ID('coffeetable', 'U') IS NOT NULL DROP TABLE dbo.coffeetable;
+    IF OBJECT_ID('customer', 'U') IS NOT NULL DROP TABLE dbo.customer;
+    IF OBJECT_ID('category', 'U') IS NOT NULL DROP TABLE dbo.category;
+
+  
+   
+    CREATE TABLE dbo.category (
       categoryid INT IDENTITY(1,1) PRIMARY KEY,
       description VARCHAR(100) NOT NULL
     );
 
-    CREATE TABLE item (
+    CREATE TABLE dbo.item (
       itemid INT IDENTITY(1,1) PRIMARY KEY,
       categoryid INT NOT NULL,
       description VARCHAR(100) NOT NULL,
@@ -132,12 +155,12 @@ try:
       CONSTRAINT fk_item__category FOREIGN KEY (categoryid) REFERENCES category (categoryid)
     );
 
-    CREATE TABLE coffeetable (
+    CREATE TABLE dbo.coffeetable (
       tableid INT IDENTITY(1,1) PRIMARY KEY,
       occupied BIT NOT NULL DEFAULT 0
     );
 
-    CREATE TABLE customer (
+    CREATE TABLE dbo.customer (
       customerid INT IDENTITY(1,1) PRIMARY KEY,
       name VARCHAR(100) NOT NULL,
       phone VARCHAR(30),
@@ -145,7 +168,7 @@ try:
       cpf VARCHAR(11)
     );
 
-    CREATE TABLE customerorder (
+    CREATE TABLE dbo.customerorder (
       orderid INT IDENTITY(1,1) PRIMARY KEY,
       customerid INT NOT NULL,
       tableid INT NOT NULL,
@@ -155,7 +178,7 @@ try:
       CONSTRAINT fk_customerorder__customer FOREIGN KEY (customerid) REFERENCES customer (customerid)
     );
 
-    CREATE TABLE orderitem (
+    CREATE TABLE dbo.orderitem (
       orderitemid INT IDENTITY(1,1) PRIMARY KEY,
       orderid INT NOT NULL,
       itemid INT NOT NULL,
@@ -164,7 +187,7 @@ try:
       CONSTRAINT fk_orderitem__item FOREIGN KEY (itemid) REFERENCES item (itemid)
     );
 
-    CREATE TABLE payment (
+    CREATE TABLE dbo.payment (
       paymentid INT IDENTITY(1,1) PRIMARY KEY,
       customerid INT NOT NULL,
       orderid INT NOT NULL,
@@ -174,14 +197,14 @@ try:
       CONSTRAINT fk_payment__customerorder FOREIGN KEY (orderid) REFERENCES customerorder (orderid)
     );
 
-    CREATE TABLE cat (
+    CREATE TABLE dbo.cat (
       catid INT IDENTITY(1,1) PRIMARY KEY,
       name VARCHAR(100) NOT NULL,
       age INT NOT NULL,
       adoption_date DATETIME NOT NULL
     );
 
-    CREATE TABLE cat_customer (
+    CREATE TABLE dbo.cat_customer (
       cat_customerid INT IDENTITY(1,1) PRIMARY KEY,
       catid INT NOT NULL,
       customerid INT NOT NULL,
@@ -189,6 +212,8 @@ try:
       CONSTRAINT fk_cat_customer__cat FOREIGN KEY (catid) REFERENCES cat (catid),
       CONSTRAINT fk_cat_customer__customer FOREIGN KEY (customerid) REFERENCES customer (customerid)
     );
+
+ 
     """)
     conn.commit()
 
