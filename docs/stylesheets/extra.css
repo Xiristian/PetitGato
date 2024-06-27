@@ -1,0 +1,23 @@
+details {
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+details:hover {
+  background-color: #f0f0f0;
+}
+
+details summary {
+  font-weight: bold;
+  font-size: 1.2em;
+  outline: none;
+}
+
+details p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
