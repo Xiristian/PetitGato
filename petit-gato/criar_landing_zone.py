@@ -38,7 +38,7 @@ file_system_client = DataLakeServiceClient(account_url=f"https://{account_name}.
 
 # Tentar criar o diretório, se não existir
 try:
-    directory_client = file_system_client.get_file_system_client(file_system_name).get_directory_client()
+    directory_client = file_system_client.get_file_system_client(file_system_name).get_directory_client('petitgato')
     directory_client.create_directory()
 except ResourceExistsError:
     print(f"O diretório já existe.")
