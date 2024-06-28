@@ -27,8 +27,7 @@ nav:
 theme:
   name: material
   palette:
-    primary: blue grey 
-    accent: light-blue
+    primary: brown
   language: pt
   features:
     - navigation.tabs
