@@ -31,10 +31,14 @@ details:hover {
 }
 
 details summary {
-  background-color: #f0f0f0; 
-  color: #D68D7B; 
+  background-color: #e9c3a9 !important;  
+  color:#513225 !important;
   font-weight: bold;
   font-size: 1.2em;
+}
+
+details summary::before {
+  background:#513225 !important;
 }
 
 details p {
@@ -51,7 +55,7 @@ details p {
 }
 
 .md-content pre {
-  background-color: #e9c3a99c;
+  background-color: #e9c3a9;
   border-radius: 3px;
   padding: 2px; 
   overflow: auto; 
