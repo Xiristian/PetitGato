@@ -47,10 +47,8 @@ Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
 ## Ferramentas utilizadas
 
-* [Apache Airflow](https://airflow.apache.org/) - Orquestração de Fluxos de Trabalho
-* [Apache Spark](https://spark.apache.org/) - Processamento Distribuído de Dados
 * [MkDocs](https://www.mkdocs.org/) - Documentação
-* [Databriks](https://docs.databricks.com/en/repos/get-access-tokens-from-git-provider.html) - Ingestão de dados
+* [Databriks](https://docs.databricks.com/en/repos/get-access-tokens-from-git-provider.html) - Ingestão de dados/Orquestração de Fluxos de Trabalho/Processamento Distribuído de Dados
 * [Power BI](https://www.microsoft.com/pt-br/power-platform/products/power-bi) - Visualização e Análise dos Dados Processados
 
 ## Colaboração
