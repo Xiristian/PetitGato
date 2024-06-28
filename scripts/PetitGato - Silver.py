@@ -88,6 +88,8 @@ def renomear_colunas(diretorio):
 
     for coluna in df.columns:
         novo_nome = coluna.upper()
+        novo_nome = novo_nome.replace("CATID", "GATOCODIGO")
+        novo_nome = novo_nome.replace("CAT_", "GATO_")
         novo_nome = novo_nome.replace("ID", "CODIGO")
         novo_nome = novo_nome.replace("ORDER", "PEDIDO")
         novo_nome = novo_nome.replace("PRICE", "VALOR")
@@ -106,7 +108,6 @@ def renomear_colunas(diretorio):
         novo_nome = novo_nome.replace("OCUPPIED", "OCUPADA")
         novo_nome = novo_nome.replace("QUANTITY", "QUANTIDADE")
         novo_nome = novo_nome.replace("OPENED", "ABERTO")
-        novo_nome = novo_nome.replace("CAT", "GATO")
         novo_nome = novo_nome.replace("AGE", "IDADE")
 
         if "CODIGO" in novo_nome:
