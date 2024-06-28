@@ -14,16 +14,12 @@ Bem-vindo à documentação do Projeto PetitGato desenvolvido com base nos siste
 
 Esta documentação está organizada nas seguintes seções:
 
+- [Visão Geral do PipeLine](overview.md)
 - [Configuração Terraform e Datalake](azure-data-lake-terraform.md)
 - [Configuração Inicial do Ambiente](environment_setup.md)
 - [Ingestão de Dados](ingestion.md)
 - [Transformação de Dados com Apache Spark](transformation.md)
-- [Arquitetura do Data Lake](data_lake_architecture.md)
-- [Armazenamento em Object Storage](object_storage.md)
-- [Modelo Dimensional ou OBT](dimensional_model.md)
+- [Modelo Dimensional](dimensional_model.md)
 - [Dashboard e Visualização](dashboard.md)
 - [Tecnologias Utilizadas](technologies.md)
-- [Gestão do Projeto no GitHub](github_management.md)
-- [Apresentação e Entrega](presentation_delivery.md)
-- [Conclusão](conclusion.md)
-- [Colaboração](team.md)
+- [Contribuidores do Projeto](contribuitors.md)
