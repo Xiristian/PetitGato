@@ -27,8 +27,8 @@ display(dbutils.fs.mounts())
 
 # COMMAND ----------
 
-storageAccountName = "datalake271297fb88ef6733"
-sasToken = "sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupyx&se=2024-06-29T00:29:26Z&st=2024-06-28T16:29:26Z&spr=https&sig=NPxuYKGVwZPiye%2FpKprMavdDoJLyIFt5WfkJE40TNFE%3D"
+storageAccountName = "datalake15b08d56c4920f36"
+sasToken = "sv=2022-11-02&ss=bfqt&srt=sco&sp=rwdlacupyx&se=2024-06-29T04:47:37Z&st=2024-06-28T20:47:37Z&spr=https&sig=3759nFSMPBdjIy2lOKOUDv1jGXRaPt%2FRtIEnshqFsFk%3D"
 
 def mount_adls(blobContainerName):
     try:
