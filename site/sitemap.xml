@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/Xiristian/PetitGato.git/dashboard/</loc>
+         <lastmod>2024-06-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/Xiristian/PetitGato.git/dimensional_model/</loc>
          <lastmod>2024-06-28</lastmod>
          <changefreq>daily</changefreq>
@@ -46,7 +51,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/Xiristian/PetitGato.git/team/</loc>
+         <loc>https://github.com/Xiristian/PetitGato.git/tools/</loc>
+         <lastmod>2024-06-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/Xiristian/PetitGato.git/transformation/</loc>
          <lastmod>2024-06-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
