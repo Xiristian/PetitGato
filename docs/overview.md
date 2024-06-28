@@ -7,15 +7,13 @@ O pipeline de dados é composto de várias etapas que processam os dados desde a
 1. **Extração**: Coleta de dados de várias fontes.
 2. **Transformação**: Processamento e transformação dos dados.
 3. **Carregamento**: Armazenamento dos dados transformados em destinos finais.
-4. **Monitoramento**: Monitoramento contínuo do pipeline para garantir a integridade dos dados.
 
 ### Diagrama do Pipeline
 
-![Diagrama do Pipeline](images/pipeline-diagram.png)
+![Diagrama do Pipeline](images\pipeline-diagram.jpg)
 
 ## Componentes
 
-- **[Extração](components/extraction.md)**
-- **[Transformação](components/transformation.md)**
-- **[Carregamento](components/loading.md)**
-- **[Monitoramento](components/monitoring.md)**
+- **[Iniciando Ambiente](environment_setup.md)**
+- **[Ingestão de Dados](ingestion.md)**
+- **[Transformação de Dados com Apache](transformation.md)**

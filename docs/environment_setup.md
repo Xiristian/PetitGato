@@ -1,42 +1,13 @@
-# Configuração Inicial do Projeto
+# Configuração do Ambiente
 
-## Instalação das Ferramentas
+## Passo a passo Databricks:
 
-### 1. Abrir o Powershell como administrador
+1. **Criar um Fork do repositório atual**
+    - Acesse o repositório no GitHub que você deseja clonar.
+    - Clique no botão "Fork" no canto superior direito da página do repositório.
+    - Siga as instruções para criar um fork do repositório em sua própria conta do GitHub.
 
-### 2. Instalar o Pyenv (gerenciamento de versões do Python)
-
-```sh
-Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
-```
-
-### 3. Instala o PIPX (instala e gerencia pacotes Python globais)
-
-```sh 
- pip install  pipx
-```
-
-### 4. Instalar o Poetry (gerencia dependências e empacotamento Python)
-
-```sh
-pipx install poetry 
-```
-
-## Reestruturação das Tabelas e Configurações Adicionais
-
-
-<details>
-<summary>Detalhes da Reestruturação das Tabelas</summary>
-
-Após a instalação das ferramentas e configuração inicial do ambiente, foram realizadas as seguintes ações adicionais:<br><br>
-
-Reestruturação das Tabelas: As tabelas existentes foram modificadas para remover a tabela cache e as colunas de total do item e pedido. Foi adicionada uma nova coluna 'gato' com informações como nome, idade e data de acolhimento. Além disso, criou-se uma coluna para relacionar o gato com o cliente, incluindo informações de data de adoção.
-</details>
-
-<details>
-<summary>Ferramentas Utilizadas</summary>
-VSCode<br>
-Python<br>
-SQL Server<br>
-Docker
-</details>
+2. **Conectar conta do Databricks com GitHub**
+    - Para conectar sua conta do Databricks com o GitHub, siga as instruções detalhadas no documento oficial da Databricks:
+    [Get Access Tokens from Git Provider](https://docs.databricks.com/en/repos/get-access-tokens-from-git-provider.html)
+    - Este guia irá ajudá-lo a gerar tokens de acesso e configurar a integração entre o Databricks e o GitHub.
