@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Um parágrafo da descrição do projeto vai aqui
+O PetitGato é um sistema desenvolvido para gerenciar uma cafeteria temática com gatos. A cafeteria permite que os clientes desfrutem de uma boa xícara de café enquanto interagem com gatos. Este documento fornece uma visão geral do projeto, seus objetivos e suas principais funcionalidades.
 
 ## Começando
 
@@ -12,9 +12,7 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 ## Desenho de Arquitetura
 
-Coloqui uma imagem do seu projeto, como no exemplo abaixo:
-
-![image](https://github.com/jlsilva01/projeto-ed-satc/assets/484662/541de6ab-03fa-49b3-a29f-dec8857360c1)
+![image](https://github.com/Xiristian/PetitGato/assets/127258498/78f6e7a5-6666-4865-921a-61c46453982a)
 
 
 ## Pré-requisitos
@@ -49,11 +47,11 @@ Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
 ## Ferramentas utilizadas
 
-Mencione as ferramentas que você usou para criar seu projeto
-
-* Ferramenta 1 + link - Breve descrição
-* Ferramenta 2 + link - Breve descrição
-* Ferramenta 3 + link - Breve descrição
+* [Apache Airflow](https://airflow.apache.org/) - Orquestração de Fluxos de Trabalho
+* [Apache Spark](https://spark.apache.org/) - Processamento Distribuído de Dados
+* [MkDocs](https://www.mkdocs.org/) - Documentação
+* [Databriks](https://docs.databricks.com/en/repos/get-access-tokens-from-git-provider.html) - Ingestão de dados
+* [Power BI](https://www.microsoft.com/pt-br/power-platform/products/power-bi) - Visualização e Análise dos Dados Processados
 
 ## Colaboração
 
@@ -80,10 +78,13 @@ Fale sobre a versão e o controle de versões para o projeto. Para as versões d
 
 ## Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Aluno 1** - *Trabalho Inicial* - [(https://github.com/linkParaPerfil)](https://github.com/linkParaPerfil)
-* **Aluno 2** - *Documentação* - [https://github.com/linkParaPerfil](https://github.com/linkParaPerfil)
+*  *Responsabilidade* - [Ana Carolina Machado](https://github.com/anacarolina1002)
+*  *Responsabilidade* - [Bruna Peruch](https://github.com/brupperuch)
+*  *Responsabilidade* - [Christian Hederson Cypriano](https://github.com/Xiristian)
+*  *Responsabilidade* - [Guilherme Pizzollo](https://github.com/guilhermebp030504)
+*  *Documentação* - [Julia De Luca](https://github.com/judwluca)
+*  *Documentação* - [Luz Brenda Oliveira](https://github.com/luzbrendaoliv)
+*  *Responsabilidade* - [Wallace Mendes](https://github.com/WallaceB2)
 
 Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
 
