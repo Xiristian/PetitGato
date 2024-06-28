@@ -1,3 +1,22 @@
+.md-header {
+  background: url('../images/fundo.jpg');
+    background-size: cover;
+    background-position: center top;
+}
+
+.md-tabs {
+  background-color: #e9c3a9;
+  background-size: cover;
+}
+
+.md-content a {
+  color: #D68D7B; 
+}
+
+.md-content a:hover, .md-content a:focus {
+  color: #513225;  
+}
+
 details {
   margin-bottom: 1em;
   border: 1px solid #ccc;
@@ -12,12 +31,32 @@ details:hover {
 }
 
 details summary {
+  background-color: #f0f0f0; 
+  color: #D68D7B; 
   font-weight: bold;
   font-size: 1.2em;
-  outline: none;
 }
 
 details p {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+}
+
+.md-nav__link {
+  color: #D68D7B;
+}
+
+.md-nav__link :hover, .md-nav__link :focus {
+  color: #513225;
+}
+
+.md-content pre {
+  background-color: #e9c3a99c;
+  border-radius: 3px;
+  padding: 2px; 
+  overflow: auto; 
+}
+
+.md-tabs__link {
+  color: #fcfcfc;
 }

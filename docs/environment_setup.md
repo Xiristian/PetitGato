@@ -28,14 +28,15 @@ pipx install poetry
 <details>
 <summary>Detalhes da Reestruturação das Tabelas</summary>
 
-Após a instalação das ferramentas e configuração inicial do ambiente, foram realizadas as seguintes ações adicionais:
+Após a instalação das ferramentas e configuração inicial do ambiente, foram realizadas as seguintes ações adicionais:<br><br>
 
 Reestruturação das Tabelas: As tabelas existentes foram modificadas para remover a tabela cache e as colunas de total do item e pedido. Foi adicionada uma nova coluna 'gato' com informações como nome, idade e data de acolhimento. Além disso, criou-se uma coluna para relacionar o gato com o cliente, incluindo informações de data de adoção.
 </details>
-<details >
-<summary >Ferramentas Utilizadas</summary>
-VSCode
-Python
-SQL Server
+
+<details>
+<summary>Ferramentas Utilizadas</summary>
+VSCode<br>
+Python<br>
+SQL Server<br>
 Docker
 </details>
