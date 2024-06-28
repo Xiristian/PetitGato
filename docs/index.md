@@ -1,6 +1,6 @@
 ## PetitGato
 
-Bem-vindo à documentação do Projeto PetitGato desenvolvido com base nos sistemas de Banco de Dados 2. Esta documentação detalha o processo de construção do Data Lake, desde a leitura dos dados até a disponibilização para consumo através de um dashboard.
+Bem-vindo à documentação do Projeto PetitGato desenvolvido com base nos sistemas de Engenharia de Dados. Esta documentação detalha o processo de construção do Data Lake, desde a leitura dos dados até a disponibilização para consumo através de um dashboard.
 
 ## Objetivos do Projeto
 
@@ -21,5 +21,5 @@ Esta documentação está organizada nas seguintes seções:
 - [Transformação de Dados com Apache Spark](transformation.md)
 - [Modelo Dimensional](dimensional_model.md)
 - [Dashboard e Visualização](dashboard.md)
-- [Tecnologias Utilizadas](technologies.md)
+- [Ferramentas Utilizadas](tools.md)
 - [Contribuidores do Projeto](contribuitors.md)
